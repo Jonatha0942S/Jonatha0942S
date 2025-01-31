@@ -17,7 +17,7 @@ public class PABD2024 {
      */
     public static void main(String[] args) throws SQLException {
 
-        Customer c = new Customer(1, "Dalai", "Lama", "dalai@microsoft.com", 10, 1);
+        Customer c = new Customer(1, "Jonathas", "Roberto", "r.jonathas@escolar.ifrn.edu.br", 1, 1);
         
         CustomerDAO dao = new CustomerDAO();
         
@@ -25,7 +25,5 @@ public class PABD2024 {
         dao.updateCustomer(611);
         dao.deleteCustomer(610);
         dao.showCustomers();
-        
     }
-
 }
