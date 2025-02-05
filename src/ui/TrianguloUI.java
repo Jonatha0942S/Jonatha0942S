@@ -5,10 +5,11 @@
 package ui;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author 20221074010020
+ * @author 1886519
  */
 public class TrianguloUI extends javax.swing.JFrame {
 
@@ -44,14 +45,12 @@ public class TrianguloUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        painel.setBackground(new java.awt.Color(204, 255, 255));
-        painel.setForeground(new java.awt.Color(204, 255, 255));
+        painel.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Triângulos");
-        jLabel1.setToolTipText("");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -60,117 +59,107 @@ public class TrianguloUI extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("A =");
+        jLabel2.setText("A = ");
 
         aTF.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         aTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("B =");
+        jLabel3.setText("B = ");
 
         bTF.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         bTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("C =");
+        jLabel4.setText("C = ");
 
         cTF.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         cTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("CALCULAR");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        tipoLabel.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        tipoLabel.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
         tipoLabel.setForeground(new java.awt.Color(51, 51, 51));
-        tipoLabel.setText("Tipo de triângulo = ?");
+        tipoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tipoLabel.setText("Tipo  = ?");
 
-        areaLabel.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        areaLabel.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
         areaLabel.setForeground(new java.awt.Color(51, 51, 51));
+        areaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         areaLabel.setText("Área = ?");
 
         javax.swing.GroupLayout painelLayout = new javax.swing.GroupLayout(painel);
         painel.setLayout(painelLayout);
         painelLayout.setHorizontalGroup(
             painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(208, 208, 208))
             .addGroup(painelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator1)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(painelLayout.createSequentialGroup()
-                        .addComponent(jSeparator1)
-                        .addContainerGap())
-                    .addGroup(painelLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(aTF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addGroup(painelLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bTF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cTF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(48, Short.MAX_VALUE))))
-            .addComponent(jSeparator2)
-            .addGroup(painelLayout.createSequentialGroup()
-                .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelLayout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(tipoLabel))
-                    .addGroup(painelLayout.createSequentialGroup()
-                        .addGap(226, 226, 226)
-                        .addComponent(areaLabel)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bTF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cTF, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 38, Short.MAX_VALUE))
+                    .addComponent(areaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
             .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(painelLayout.createSequentialGroup()
-                    .addGap(36, 36, 36)
-                    .addComponent(jLabel2)
-                    .addContainerGap(523, Short.MAX_VALUE)))
+                    .addContainerGap()
+                    .addComponent(tipoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         painelLayout.setVerticalGroup(
             painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(aTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2))
                     .addComponent(jLabel3)
                     .addComponent(bTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(cTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
+                .addGap(34, 34, 34)
                 .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tipoLabel)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(areaLabel)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(39, 39, 39))
             .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(painelLayout.createSequentialGroup()
-                    .addGap(126, 126, 126)
-                    .addComponent(jLabel2)
-                    .addContainerGap(306, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLayout.createSequentialGroup()
+                    .addContainerGap(333, Short.MAX_VALUE)
+                    .addComponent(tipoLabel)
+                    .addGap(99, 99, 99)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -186,11 +175,12 @@ public class TrianguloUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public static boolean isTriangle(double a,double b,double c){
+
+    public static boolean isTriangle(double a, double b, double c) {
         return a + b > c && a + c > b && b + c > a;
     }
-                          
-    public static String typeTriangle(double a,double b,double c){
+
+    public static String typeTriangle(double a, double b, double c) {
         if (a == b && b == c) {
             return "EQUILÁTERO";
         } else if (a == b || b == c || a == c) {
@@ -199,39 +189,51 @@ public class TrianguloUI extends javax.swing.JFrame {
             return "ESCALENO";
         }
     }
-    
+
     public static double areaTriangle(double a, double b, double c) {
         double p = (a + b + c) / 2;
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
-    }    
+    }
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         areaLabel.setText("Calcule a área!")        ;
-    }//GEN-LAST:event_jButton1ActionPerformed
 
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        double a = Double.parseDouble(aTF.getText());
-        double b = Double.parseDouble(bTF.getText());
-        double c = Double.parseDouble(cTF.getText());
-        
-        if (isTriangle(a, b, c)) {
-            tipoLabel.setText("Tipo = " + typeTriangle(a, b, c));
-            areaLabel.setText(String.format("Área = %.2f", areaTriangle(a, b, c)));
+        if (aTF.getText().equals("")
+                || bTF.getText().equals("")
+                || cTF.getText().equals("")) {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Preencha todos os lados!",
+                    "ERRO",
+                    //                JOptionPane.INFORMATION_MESSAGE
+                    //                JOptionPane.WARNING_MESSAGE
+                    JOptionPane.ERROR_MESSAGE
+            //                JOptionPane.QUESTION_MESSAGE
+            //                JOptionPane.PLAIN_MESSAGE
+            );
         } else {
-            tipoLabel.setText("Não é um triângulo!");
-            tipoLabel.setForeground(Color.DARK_GRAY);
-            areaLabel.setText("");
+            double a = Double.parseDouble(aTF.getText());
+            double b = Double.parseDouble(bTF.getText());
+            double c = Double.parseDouble(cTF.getText());
+
+            if (isTriangle(a, b, c)) {
+                tipoLabel.setText("Tipo = " + typeTriangle(a, b, c));
+                areaLabel.setText(String.format("Área = %.4f", areaTriangle(a, b, c)));
+            } else {
+                tipoLabel.setText("NÃO É um triângulo!");
+                tipoLabel.setForeground(Color.red);
+                areaLabel.setText("");
+            }
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         aTF.setText("");
         bTF.setText("");
         cTF.setText("");
-        
         tipoLabel.setText("Tipo de triângulo = ?");
-        areaLabel.setText("A = ?");
-        
+        tipoLabel.setForeground(Color.black);
+        areaLabel.setText("Área = ?");
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
