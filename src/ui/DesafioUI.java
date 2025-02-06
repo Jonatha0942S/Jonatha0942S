@@ -65,7 +65,7 @@ public class DesafioUI extends javax.swing.JFrame {
 
         jSlider2.setBackground(new java.awt.Color(242, 242, 242));
         jSlider2.setForeground(new java.awt.Color(0, 0, 0));
-        jSlider2.setMajorTickSpacing(50);
+        jSlider2.setMajorTickSpacing(100);
         jSlider2.setMaximum(255);
         jSlider2.setMinorTickSpacing(10);
         jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
