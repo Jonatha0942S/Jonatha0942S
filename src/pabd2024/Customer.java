@@ -21,6 +21,25 @@ public class Customer {
     private Timestamp create_date;
     private Timestamp last_upgrade;
 
+    public Customer(int customer_id, int store_id, String first_name, String last_name, String email, int address_id, int active, Timestamp create_date, Timestamp last_upgrade) {
+        this.customer_id = customer_id;
+        this.store_id = store_id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.address_id = address_id;
+        this.active = active;
+        this.create_date = create_date;
+        this.last_upgrade = last_upgrade;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" + "customer_id=" + customer_id + ", store_id=" + store_id + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email + ", address_id=" + address_id + ", active=" + active + ", create_date=" + create_date + ", last_upgrade=" + last_upgrade + '}';
+    }
+    
+    
+
     public Customer(int store_id, String first_name, String last_name, String email, int address_id, int active) {
         this.customer_id = customer_id;
         this.store_id = store_id;

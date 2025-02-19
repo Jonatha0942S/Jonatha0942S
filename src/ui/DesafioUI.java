@@ -186,7 +186,6 @@ public class DesafioUI extends javax.swing.JFrame {
         jTextField3.setText(jSlider3.getValue()+"");
         cor_painel();
     }//GEN-LAST:event_jSlider3StateChanged
-    
     private void cor_painel(){
         jPanel1.setBackground(new Color(jSlider1.getValue(), jSlider2.getValue(), jSlider3.getValue()));
     }

@@ -21,9 +21,13 @@ public class PABD2024 {
         
         CustomerDAO dao = new CustomerDAO();
         
-        dao.insertCustomer(c);
-        dao.updateCustomer(611);
-        dao.deleteCustomer(610);
-        dao.showCustomers();
+//        dao.insertCustomer(c);
+//        dao.updateCustomer(611);
+//        dao.deleteCustomer(610);
+//        dao.showCustomers();
+
+        System.out.println(dao.getCustomers());
+    
     }
+    
 }
